@@ -5,4 +5,3 @@ main = do
     putStrLn("Hi there")
     print(fac 4)
     print(maximum ['a'..'z'])
-    print(fib 40)
