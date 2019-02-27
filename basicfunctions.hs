@@ -1,4 +1,4 @@
-module BasicFunctions(fac,replicate',take',reverse',repeat',zip',elem,quicksort,maximum,minimum) where
+module BasicFunctions(fac,replicate',take',reverse',repeat',zip',elem,quicksort,maximum,minimum,fib) where
     -----------------------------------------------------------------------------------------------------------------
     -- CALCULATING THE FACTORIAL OF A NUMBER
     -----------------------------------------------------------------------------------------------------------------
@@ -56,3 +56,8 @@ module BasicFunctions(fac,replicate',take',reverse',repeat',zip',elem,quicksort,
         let smallerSorted = quicksort [a | a <- xs, a <= x]  
             biggerSorted = quicksort [a | a <- xs, a > x]  
         in  smallerSorted ++ [x] ++ biggerSorted
+
+    fib 0 = 0
+    fib 1 = 1
+    fib n = fib (n-1) + fib (n-2)--fib n = go n (0,1) where
+    
