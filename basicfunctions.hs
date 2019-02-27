@@ -41,7 +41,7 @@ module BasicFunctions(fac,replicate',take',reverse',repeat',zip',elem,quicksort,
     -----------------------------------------------------------------------------------------------------------------
     --CHECKS IF AN ELEMENT IS IN A LIST
     -----------------------------------------------------------------------------------------------------------------
-    elem' :: (Eq a) => a -> [a] -> Bool  --checks if an element is in a list
+    elem' :: (Eq a) => a -> [a] -> Bool
     elem' a [] = False  
     elem' a (x:xs)  
         | a == x    = True  
@@ -50,7 +50,7 @@ module BasicFunctions(fac,replicate',take',reverse',repeat',zip',elem,quicksort,
     -----------------------------------------------------------------------------------------------------------------
     -- SORTING THE ELEMENTS OF A LIST
     -----------------------------------------------------------------------------------------------------------------
-    quicksort :: (Ord a) => [a] -> [a]  --sorting elements in a list
+    quicksort :: (Ord a) => [a] -> [a]
     quicksort [] = []  
     quicksort (x:xs) =   
         let smallerSorted = quicksort [a | a <- xs, a <= x]  
